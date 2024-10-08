@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Login</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body style="background-color:rgb(53, 51, 51)">
+    <div class="containter md" style="margin-top:20px">
+        <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+            <h1 style="text-align: center;"><span style="color:rgb(113, 53, 117);">To Do App</span></h1>
+
+            {% csrf_token %}
+            <h3>Login</h3>
+
+            <!--display error message if applicable-->
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {%for message in messages%}
+                {{message}}
+                {%endfor%}
+            </div>
+            {%endif%}
+
+            <!--Username Input Field-->
+            <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" 
+                    name="username" id="exampleInputEmail1" 
+                    placeholder="Enter Username" required>
+            </div>
+            <!--Password Input Field-->
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="text" class="form-control"
+                    name="password" id="exampleInputPassword1"
+                    placeholder="Enter Password" required>
+            </div>
+
+            <!--Redirect to Register Page if they dont have account-->
+            <p>Don't have an account? <a href='/register/'>Register</a></p>
+            <!--Submit button-->
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
