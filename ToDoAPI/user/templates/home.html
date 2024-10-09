@@ -26,7 +26,23 @@
     
   </div>
      
-  <script src="script.js"></script>
+  <script>
+    var acc = document.getElementsByClassName("list");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+    
+        var tasks = this.nextElementSibling;
+        if (tasks.style.display === "block") {
+          tasks.style.display = "none";
+        } else {
+          tasks.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
     
 <footer>
