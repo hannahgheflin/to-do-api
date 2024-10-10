@@ -5,6 +5,7 @@ body {
 
 header {
   margin:0px;
+  margin-bottom:50px;
   color:white; 
   padding:20px;
   padding-left:100px;
@@ -54,7 +55,7 @@ footer {
   padding:15px;
 }
 .active, .list:hover {
-  opacity:.8; 
+  opacity:.8;
 }
 
 .tasks {
@@ -63,4 +64,16 @@ footer {
   padding-left:10px;
   overflow:hidden;
   display:none;
+}
+
+
+
+
+/*LOGIN SPECIFIC*/
+.login {
+  max-width:400px;
+  margin:auto;
+  background-color:white;
+  padding:30px;
+  border-radius:10px;
 }
