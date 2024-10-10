@@ -9,44 +9,46 @@
     </head>
 
     <header>
-        <h1 style="flex:50%; cursor:pointer;">TO DO LISTS</h1>
-        <button type="button" class="button">Logout</button>
+        <h1 style="flex:50%; cursor:pointer; text-align:center;">TO DO LISTS</h1>
     </header>
 
     <body style="background-color:darkgray">
-        <div class="login">
+        <div style="color:lightgray;font-size:13px;"class="login">
             <form>
-                <h3>Login</h3>
+                <h3 style="text-align:center;margin-bottom:30px;color:#FF00B2;font-size:30px">SIGN IN</h3>
+              
                 <!--display error message if applicable-->
-                {% if messages %}
-                <div class="alert alert-primary" role="alert">
-                    {%for message in messages%}
-                    {{message}}
-                    {%endfor%}
+                <!--{% if messages %}-->
+                <div class="error-message">
+                  <!--{%for message in messages%}-->
+                   <!--{{message}}-->
+                    Error Message
+                  <!--{% endfor %}-->
                 </div>
-                {%endif%}
+                <!--{%endif%}-->
 
                 <!--Username Input Field-->
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Username</label>
-                    <input type="text" class="form-control" 
-                        name="username" id="exampleInputEmail1" 
-                        placeholder="Enter Username" required>
+                    <input type="text" class="input" 
+                        name="username" id="exampleInputEmail1"
+                        placeholder="Username"required><br><br>
+                      
                 </div>
+                  
                 <!--Password Input Field-->
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="text" class="form-control"
+                    <input type="text" class="input"
                         name="password" id="exampleInputPassword1"
-                        placeholder="Enter Password" required>
+                        placeholder="Password" required>
                 </div>
 
                 <!--Redirect to Register Page if they dont have account-->
-                <p>Don't have an account? <a href='/register/'>Register</a></p>
+                <div style="display:flex; position:relative; justify-content:space-between; width:100%; padding-bottom:15px;">
+                  Dont have an account?<a href='/register/'>Register</a>
+                </div>
                 <!--Submit button-->
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </form>
-                
+                <button type="submit" class="submit">Login</button>
+            </form>   
         </div>
     </body>
 
