@@ -1,79 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 body {
-  margin: 0px;
-  background-color:style= #505050;
+    margin: 0px;
+    background-color: style=#505050;
 }
 
 header {
-  margin:0px;
-  margin-bottom:50px;
-  color:white; 
-  padding:20px;
-  padding-left:100px;
-  padding-right:100px;
-  background-color:#3b3b3b;
-  font-family:Arial;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    margin: 0px;
+    margin-bottom:50px;
+    color: white;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #3b3b3b;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
-  background-color:#3b3b3b;
-  color:white;
-  margin:0px;
-  margin-top:50px;
-  font-family:Ariel,Helvetica;
-  text-align:center;
-  padding:50px;
+    background-color: #3b3b3b;
+    color: white;
+    margin: 0px;
+    margin-top: 50px;
+    font-family: Quicksand, sans-serif;
+    text-align: center;
+    padding: 50px;
 }
 
 /*logout button*/
 .button {
-  border:none;
-  background-color:#3b3b3b;
-  color:white;
-  cursor:pointer;
-  padding:20px;
+    border: none;
+    background-color: #3b3b3b;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
 }
-.button:hover {
-  color:lightgray; 
-}
+
+.button:hover {color: lightgray;}
 
 /*space between header and footer*/
 .body {
-  max-width:500px;
-  margin:auto;
+    max-width: 500px;
+    margin: auto;
 }
 
 /*lists*/
 .list {
-  background-color:#919191;
-  border:none;
-  cursor:pointer;
-  width:100%;
-  text-align:left;
-  padding:15px;
+    background-color: #919191;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
 }
-.active, .list:hover {
-  opacity:.8;
-}
+
+.active, .list:hover {opacity: .8;}
 
 .tasks {
-  background-color:white;
-  opacity:.8;
-  padding-left:10px;
-  overflow:hidden;
-  display:none;
+    background-color: white;
+    opacity: .8;
+    padding-left: 10px;
+    overflow: hidden;
+    display: none;
 }
-
-
-
 
 /*LOGIN SPECIFIC*/
 .login {
-  max-width:400px;
+  max-width:300px;
   margin:auto;
-  background-color:white;
-  padding:30px;
+  background-color:#3b3b3b;
+  padding:10px 30px;
+  padding-bottom:70px;
   border-radius:10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family:Quicksand,sans-serif;
+  position:relative;
+}
+.input {
+  border:none;
+  border-radius:3px;
+  outline:none;
+  background-color:#505050;
+  width:90%;
+  margin-bottom:20px;
+  padding:15px;
+  color:white;
+  font-size:15px;
+}
+.input:focus {outline:none;}
+.input::placeholder {
+  font-size:15px; 
+}
+.error-message {
+  background-color:lightblue;
+  padding:10px;
+  text-align:center;
+  border-radius:8px;
+  opacity:.7;
+  margin-bottom:20px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display:none;
+}
+.submit {
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border:0;
+  padding:8px 20px;
+  border-radius:3px;
+  font-size:medium;
+  margin-top:20px;
+  font-weight:bold;
+  width:83%;
+  background-color:#FF00B2;
+  font-family:Quicksand, sans-serif;
+  cursor:pointer;
+}
+.submit:hover {
+  background-color:hotpink;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login a {
+  text-decoration:none;
+  color:#FF00B2;
+  font-size:15px;
 }
