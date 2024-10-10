@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <title>Register</title>
+
+    </head>
+
+    <header>
+        <h1 style="flex:50%; cursor:pointer; text-align:center;">TO DO LISTS</h1>
+    </header>
+
+    <body style="background-color:darkgray">
+        <div style="color:lightgray;font-size:13px;" class="login">
+            <form>
+                <h3 style="text-align:center;color:#FF00B2;font-size:30px;">SIGN UP</h3>
+              
+                <!--display error message if applicable-->
+                <!--{% if messages %}-->
+                <div class="error-message">
+                  <!--{%for message in messages%}-->
+                   <!--{{message}}-->
+                    Error Message
+                  <!--{% endfor %}-->
+                </div>
+                <!--{%endif%}-->
+
+              	<!--Last Name Input Field-->
+                <div>
+                    <input type="text" class="input" 
+                        name="first-name" placeholder="First Name" required><br><br>
+                      
+                </div>
+                
+                <!--First Name Input Field-->
+                <div>
+                    <input type="text" class="input" 
+                        name="last-name" placeholder="Last Name" required><br><br>
+                      
+                </div>
+              
+                <!--Username Input Field-->
+                <div>
+                    <input type="text" class="input" 
+                        name="username" placeholder="Username" required><br><br>
+                      
+                </div>
+                  
+                <!--Password Input Field-->
+                <div>
+                    <input type="text" class="input"
+                        name="password" placeholder="Password" required><br><br>
+                </div>
+                  
+                <!--Repeat Password Input Field-->
+                <div>
+                    <input type="text" class="input"
+                        name="confirm-password" placeholder="Re-enter Password" required><br><br>
+                </div>
+                <!--Redirect to Login Page if they already have account-->
+                <div style="display:flex; position:relative; justify-content:space-between; width:100%; padding-bottom:15px;">
+                  Already have an account?<a href='/login/'>Login</a>
+                </div>
+                <!--Submit button-->
+                <button type="submit" class="submit">Create Account</button>
+            </form>   
+        </div>
+    </body>
+
+    <footer>
+        Made by Hannah Heflin
+    </footer>
+
+</html>
