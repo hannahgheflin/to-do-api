@@ -10,38 +10,51 @@
 
 <header>
   <h1 style="flex:50%; cursor:pointer;">TO DO LISTS</h1>
-  <button type="button" class="button">Logout</button>
+  <a href='login.html'class="logout">Logout</a>
 </header>
+
 <body>
+  <!--FILTER BAR-->
+  <div class="filter-bar">
+    <div class="filter">
+      category
+    </div>
+    <div class="filter">
+      sort
+    </div>
+    <div class="filter">
+      
+    </div>
+  </div>
   
-  <div class="body">
-    <h1>Welcome, [Name]!</h1>
-    <h2>Lists:</h2>
-    
-    <!--loop display lists-->
-    <button class="list">[Name of List]</button>
-    <div class="tasks">
-      <p>do this</p>
+  
+  <div class="body" style="max-width:700px">
+    <div class="list-box">
+      <h1>Hi, [Name]!</h1>
+      <h2>Here's what you should be doing..</h2>
+      
+      <div class="task">
+        <button class="complete"></button>
+        number 1 !
+      </div>
+      <div class="task">
+        <button class="complete"></button>
+        number 2 !
+      </div>
+      
+      <button class="edit">EDIT</button>
     </div>
     
   </div>
-     
+  
   <script>
-    var acc = document.getElementsByClassName("list");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-    
-        var tasks = this.nextElementSibling;
-        if (tasks.style.display === "block") {
-          tasks.style.display = "none";
-        } else {
-          tasks.style.display = "block";
-        }
-      });
-    }
+    const buttons = document.querySelectorAll('.button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.add('active');
+        });
+    });
   </script>
 </body>
     
