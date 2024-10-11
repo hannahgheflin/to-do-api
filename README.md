@@ -7,6 +7,8 @@ This Idea originated from an article: https://roadmap.sh/backend/project-ideas#1
 
 Stack used: Django, Python, HTML, CSS
 
+I am working on this project from 2 different environments.
+
 ### Installation Guide
 
 coming soon
