@@ -5,7 +5,7 @@ A simple to-do list manager. Each user has an account with their own list that c
 
 This Idea originated from an article: https://roadmap.sh/backend/project-ideas#1-personal-blogging-platform-api
 
-Stack used: Django, Python, HTML, Bootstrap
+Stack used: Django, Python, HTML, CSS
 
 ### Installation Guide
 
