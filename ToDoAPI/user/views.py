@@ -1,13 +1,52 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .models import *
 
+#django CRUD view class inports
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.detail import DetailView
+from django.urls import reverse_lazy
 
-# Create your views here.
+#django authentication view class imports
+from django.contrib.auth.views import LoginView
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+class CustomLoginView(LoginView):
+    template_name = 'user/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+    
+    def get_success_url(self):
+        return reverse_lazy('tasks')
+class TaskList(LoginRequiredMixin, ListView):
+    model = Task
+    context_object_name = 'tasks'
+    
+    
+class TaskDetail(LoginRequiredMixin, DetailView):
+    model = Task
+    context_object_name = 'task'
+    
+class TaskCreate(LoginRequiredMixin, CreateView):
+    model = Task
+    fields = '__all__'
+    success_url = reverse_lazy('tasks')
+    
+class TaskUpdate(LoginRequiredMixin, UpdateView):
+    model = Task
+    fields = '__all__'
+    success_url = reverse_lazy('tasks')
+    
+class TaskDelete(LoginRequiredMixin, DeleteView):
+    model = Task
+    context_object_name = 'task'
+    success_url = reverse_lazy('tasks')
+
 def home(request):
     return render(request, "home.html")
 
